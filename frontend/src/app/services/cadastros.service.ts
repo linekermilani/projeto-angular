@@ -22,6 +22,18 @@ export class CadastrosService {
     return this.http.post<any>(this.URL, produto);
   }
 
+  buscarPorId(id: number) : Observable<Produto>{
+    return this.http.get<Produto>(this.URL + "/" + id);
+  }
+
+  atualizar(idAtualizar: number, produtoAlterado: Produto) : Observable<any> {
+    return this.http.put<any>(this.URL + "/" + idAtualizar, produtoAlterado);
+  }
+
+  excluir(id: number) : Observable<Produto> {
+    return this.http.delete<any>(this.URL + "/" + id);
+  }
+
   showMessage(msg: string) : void {
     this.snackBar.open(msg, 'X', {
       duration: 4000,

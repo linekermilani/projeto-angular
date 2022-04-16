@@ -1,3 +1,5 @@
+import { Produto } from './../../../../models/produto.model';
+import { CadastrosService } from 'src/app/services/cadastros.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 
@@ -8,16 +10,17 @@ import { Router } from '@angular/router'
 })
 export class ProdutosComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  produtos : Produto[];
+  colunas: string[] = ['id', 'nome', 'descricao', 'preco', 'acoes'];
+
+  constructor(private router : Router ,private service : CadastrosService) {
+    this.produtos = [];
+   }
 
   ngOnInit(): void {
-  }
-
-  navigateToProdutoIncluir() : void {
-    this.router.navigate(['/produtos/incluir']);
-  }
-
-  navigateToProdutoListar() : void {
-    this.router.navigate(['/produtos/listar']);
+    this.service.listar().subscribe(produtos => {
+      console.log(produtos);
+      this.produtos = produtos;
+    });
   }
 }

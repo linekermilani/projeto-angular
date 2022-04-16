@@ -1,0 +1,23 @@
+<div class="tituloListas">
+    <h1>Excluir produto</h1>
+  </div>
+  <form>
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Nome" name="nome" [(ngModel)]="produto.nome">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Descrição" name="descricao" [(ngModel)]="produto.descricao">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Preço" name="preco" [(ngModel)]="produto.preco">
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button class="btnMyFood" (click)="excluirProduto()" color="warn">Confirmar</button>
+        <button mat-raised-button class="btnMyFood" routerLink="/produtos">Cancelar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

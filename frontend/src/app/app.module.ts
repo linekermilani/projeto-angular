@@ -26,6 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatTableModule } from "@angular/material/table";
+import { EditarComponent } from './cadastros/produtos/produtos/editar/editar.component';
+import { ExcluirComponent } from './cadastros/produtos/produtos/excluir/excluir/excluir.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { MatTableModule } from "@angular/material/table";
     PedidosComponent,
     DespesasComponent,
     IncluirComponent,
-    ListarComponent
+    ListarComponent,
+    EditarComponent,
+    ExcluirComponent
   ],
   imports: [
     MatTableModule,
