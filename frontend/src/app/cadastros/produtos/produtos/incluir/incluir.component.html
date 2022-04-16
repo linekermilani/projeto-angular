@@ -1,0 +1,24 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Ex. Pizza Grande" [(ngModel)]="produto.nome" name="nome">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput placeholder="Ex. 35cm, 10 fatias" [(ngModel)]="produto.descricao" name="descricao"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Preço (R$)</mat-label>
+    <input matInput placeholder="Ex. R$49.90" [(ngModel)]="produto.preco" name="preco">
+  </mat-form-field>
+
+  <mat-card-actions>
+    <button mat-raised-button class="btnMyFood" (click)="salvarProduto()" color="primary">Salvar</button>
+    <button mat-raised-button class="btnMyFood" routerLink="/produtos">Cancelar</button>
+  </mat-card-actions>
+</form>
+
+
+
