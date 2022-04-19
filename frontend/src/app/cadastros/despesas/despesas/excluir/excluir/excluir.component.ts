@@ -26,7 +26,7 @@ export class ExcluirComponentDesp implements OnInit {
   excluirDespesa(){
     this.cadastro.excluirDespesa(this.despesa.id).subscribe(() => {
       this.router.navigate(['/despesas']);
-      this.cadastro.showMessage("Despesa excluida!");
+      this.cadastro.showMessage("Despesa excluída!");
     });
   }
 }
