@@ -19,7 +19,7 @@ export class IncluirComponent implements OnInit {
   }
 
   salvarProduto(){
-    this.cadastro.incluir(this.produto).subscribe(() => {
+    this.cadastro.incluirProduto(this.produto).subscribe(() => {
       this.router.navigate(['/produtos']);
       this.cadastro.showMessage("Produto criado!");
     });

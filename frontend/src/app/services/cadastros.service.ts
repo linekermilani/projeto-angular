@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs';
+import { Despesas } from 'src/models/despesa.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,27 +12,48 @@ import { catchError, retry } from 'rxjs';
 export class CadastrosService {
 
   URL = "http://localhost:3001/produtos";
+  URL2 = "http://localhost:3001/despesas";
 
   constructor(private snackBar : MatSnackBar, private http: HttpClient) { }
 
-  listar(): Observable<Produto[]>{
-    return this.http.get<Produto[]>(this.URL);
+  listar(): Observable<any[]>{
+    return this.http.get<any[]>(this.URL);
   }
 
-  incluir(produto : Produto) : Observable<any>{
+  listarDespesas(): Observable<any[]>{
+    return this.http.get<any[]>(this.URL2);
+  }
+
+  incluirProduto(produto : Produto) : Observable<any>{
     return this.http.post<any>(this.URL, produto);
+  }
+
+  incluirDespesa(despesa : Despesas) : Observable<any>{
+    return this.http.post<any>(this.URL2, despesa);
   }
 
   buscarPorId(id: number) : Observable<Produto>{
     return this.http.get<Produto>(this.URL + "/" + id);
   }
 
+  buscarDespesaPorId(id: number) : Observable<Despesas>{
+    return this.http.get<Despesas>(this.URL2 + "/" + id);
+  }
+
   atualizar(idAtualizar: number, produtoAlterado: Produto) : Observable<any> {
     return this.http.put<any>(this.URL + "/" + idAtualizar, produtoAlterado);
   }
 
+  atualizarDespesa(idAtualizar: number, despesaAlterada: Despesas) : Observable<any> {
+    return this.http.put<any>(this.URL2 + "/" + idAtualizar, despesaAlterada);
+  }
+
   excluir(id: number) : Observable<Produto> {
     return this.http.delete<any>(this.URL + "/" + id);
+  }
+
+  excluirDespesa(id: number) : Observable<Despesas> {
+    return this.http.delete<any>(this.URL2 + "/" + id);
   }
 
   showMessage(msg: string) : void {
