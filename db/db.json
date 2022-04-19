@@ -24,5 +24,13 @@
       "descricao": "40cm, 16 fatias",
       "preco": "69.90"
     }
+  ],
+  "despesas": [
+    {
+      "id": 1,
+      "nome": "Água",
+      "descricao": "Conta de água, janeiro 2022",
+      "preco": 140
+    }
   ]
 }

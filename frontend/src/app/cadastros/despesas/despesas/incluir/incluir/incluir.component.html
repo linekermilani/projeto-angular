@@ -1,0 +1,21 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="" [(ngModel)]="despesa.nome" name="nome">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput placeholder="" [(ngModel)]="despesa.descricao" name="descricao"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Preço (R$)</mat-label>
+      <input matInput placeholder="" [(ngModel)]="despesa.preco" name="preco">
+    </mat-form-field>
+  
+    <mat-card-actions>
+      <button mat-raised-button class="btnMyFood" (click)="salvarDespesa()" color="primary">Salvar</button>
+      <button mat-raised-button class="btnMyFood" routerLink="/despesas">Cancelar</button>
+    </mat-card-actions>
+  </form>

@@ -28,6 +28,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatTableModule } from "@angular/material/table";
 import { EditarComponent } from './cadastros/produtos/produtos/editar/editar.component';
 import { ExcluirComponent } from './cadastros/produtos/produtos/excluir/excluir/excluir.component';
+import { EditarComponentDesp } from './cadastros/despesas/despesas/editar/editar/editar.component';
+import { IncluirComponentDesp } from './cadastros/despesas/despesas/incluir/incluir/incluir.component';
+import { ExcluirComponentDesp } from './cadastros/despesas/despesas/excluir/excluir/excluir.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { ExcluirComponent } from './cadastros/produtos/produtos/excluir/excluir/
     IncluirComponent,
     ListarComponent,
     EditarComponent,
-    ExcluirComponent
+    ExcluirComponent,
+    EditarComponentDesp,
+    IncluirComponentDesp,
+    ExcluirComponentDesp
   ],
   imports: [
     MatTableModule,
