@@ -26,6 +26,7 @@ export class EditarComponent implements OnInit {
   atualizarProduto(){
     this.cadastro.atualizar(this.produto.id, this.produto).subscribe(() => {
       this.router.navigate(['/produtos']);
+      this.cadastro.showMessage("Produto editado!");
     });
   }
 }

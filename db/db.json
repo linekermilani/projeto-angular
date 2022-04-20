@@ -30,7 +30,63 @@
       "id": 1,
       "nome": "Água",
       "descricao": "Conta de água, janeiro 2022",
-      "preco": 140
+      "preco": "120.86"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "data": "10/04/2022",
+      "nome": "Maria da Silva",
+      "rua": "R. Prof. Pedro Viriato Parigot de Souza",
+      "numero": 5300,
+      "bairro": "Ecoville",
+      "cidade": "Curitiba",
+      "valor": 109.9
+    },
+    {
+      "id": 2,
+      "data": "20/04/2022",
+      "nome": "João Lima",
+      "rua": "Rua de Testes",
+      "numero": "80",
+      "bairro": "Centro",
+      "cidade": "Curitiba",
+      "produtos": "produto teste 1\nproduto teste 2",
+      "valor": 89.9
+    },
+    {
+      "id": 3,
+      "data": "",
+      "nome": "",
+      "rua": "",
+      "numero": 0,
+      "bairro": "",
+      "cidade": "",
+      "produtos": "",
+      "valor": 0
+    },
+    {
+      "id": 4,
+      "data": "",
+      "nome": "",
+      "rua": "",
+      "numero": 0,
+      "bairro": "",
+      "cidade": "",
+      "produtos": "",
+      "valor": 0
+    },
+    {
+      "id": 5,
+      "data": "",
+      "nome": "",
+      "rua": "",
+      "numero": 0,
+      "bairro": "",
+      "cidade": "",
+      "produtos": "",
+      "valor": 0
     }
   ]
 }

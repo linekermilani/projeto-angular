@@ -12,6 +12,7 @@ import { ListarComponent } from './cadastros/produtos/produtos/listar/listar/lis
 import { ExcluirComponent } from './cadastros/produtos/produtos/excluir/excluir/excluir.component';
 import { IncluirComponentDesp } from './cadastros/despesas/despesas/incluir/incluir/incluir.component';
 import { ExcluirComponentDesp } from './cadastros/despesas/despesas/excluir/excluir/excluir.component';
+import { IncluirComponentPedidos } from './cadastros/pedidos/pedidos/incluir/incluir/incluir.component';
 
 const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: "despesas/editar/:id", component: EditarComponentDesp},
     {path: "despesas/incluir", component: IncluirComponentDesp},
     {path: "despesas/excluir/:id", component: ExcluirComponentDesp},
+    {path: "pedidos/incluir", component: IncluirComponentPedidos}
 ];
 
 @NgModule({

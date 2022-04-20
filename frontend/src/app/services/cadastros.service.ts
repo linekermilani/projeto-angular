@@ -1,3 +1,4 @@
+import { Pedido } from './../../models/pedido.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Produto } from './../../models/produto.model';
 import { Injectable } from '@angular/core';
@@ -13,6 +14,7 @@ export class CadastrosService {
 
   URL = "http://localhost:3001/produtos";
   URL2 = "http://localhost:3001/despesas";
+  URL3 = "http://localhost:3001/pedidos";
 
   constructor(private snackBar : MatSnackBar, private http: HttpClient) { }
 
@@ -24,12 +26,20 @@ export class CadastrosService {
     return this.http.get<any[]>(this.URL2);
   }
 
+  listarPedidos(): Observable<any[]>{
+    return this.http.get<any[]>(this.URL3);
+  }
+
   incluirProduto(produto : Produto) : Observable<any>{
     return this.http.post<any>(this.URL, produto);
   }
 
   incluirDespesa(despesa : Despesas) : Observable<any>{
     return this.http.post<any>(this.URL2, despesa);
+  }
+
+  incluirPedido(pedido : Pedido) : Observable<any>{
+    return this.http.post<any>(this.URL3, pedido);
   }
 
   buscarPorId(id: number) : Observable<Produto>{

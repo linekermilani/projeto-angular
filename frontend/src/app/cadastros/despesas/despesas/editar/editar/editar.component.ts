@@ -26,6 +26,7 @@ export class EditarComponentDesp implements OnInit {
   atualizarDespesa(){
     this.cadastro.atualizarDespesa(this.despesa.id, this.despesa).subscribe(() => {
       this.router.navigate(['/despesas']);
+      this.cadastro.showMessage("Despesa editada!");
     });
   }
 }

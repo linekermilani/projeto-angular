@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 
+import {MatStepperModule} from '@angular/material/stepper';
 import {MatInputModule} from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
@@ -31,6 +32,8 @@ import { ExcluirComponent } from './cadastros/produtos/produtos/excluir/excluir/
 import { EditarComponentDesp } from './cadastros/despesas/despesas/editar/editar/editar.component';
 import { IncluirComponentDesp } from './cadastros/despesas/despesas/incluir/incluir/incluir.component';
 import { ExcluirComponentDesp } from './cadastros/despesas/despesas/excluir/excluir/excluir.component';
+import { IncluirComponentPedidos } from './cadastros/pedidos/pedidos/incluir/incluir/incluir.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -48,9 +51,12 @@ import { ExcluirComponentDesp } from './cadastros/despesas/despesas/excluir/excl
     ExcluirComponent,
     EditarComponentDesp,
     IncluirComponentDesp,
-    ExcluirComponentDesp
+    ExcluirComponentDesp,
+    IncluirComponentPedidos
   ],
   imports: [
+    MatDatepickerModule,
+    MatStepperModule,
     MatTableModule,
     MatSnackBarModule,
     MatFormFieldModule,
