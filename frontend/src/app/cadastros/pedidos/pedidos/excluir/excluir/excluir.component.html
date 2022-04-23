@@ -1,0 +1,38 @@
+<div class="tituloListas">
+    <h1>Excluir pedido</h1>
+  </div>
+  <form>
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Data" name="data" [(ngModel)]="pedido.data">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Nome" name="nome" [(ngModel)]="pedido.nome">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Rua" name="rua" [(ngModel)]="pedido.rua">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Número" name="numero" [(ngModel)]="pedido.numero">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Bairro" name="bairro" [(ngModel)]="pedido.bairro">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Cidade" name="cidade" [(ngModel)]="pedido.cidade">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Produtos" name="produtos" [(ngModel)]="pedido.produtos">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Valor" name="valor" [(ngModel)]="pedido.valor">
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button class="btnMyFood" (click)="excluirPedido()" color="warn">Confirmar</button>
+        <button mat-raised-button class="btnMyFood" routerLink="/pedidos">Cancelar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

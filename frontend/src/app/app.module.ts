@@ -33,6 +33,8 @@ import { EditarComponentDesp } from './cadastros/despesas/despesas/editar/editar
 import { IncluirComponentDesp } from './cadastros/despesas/despesas/incluir/incluir/incluir.component';
 import { ExcluirComponentDesp } from './cadastros/despesas/despesas/excluir/excluir/excluir.component';
 import { IncluirComponentPedidos } from './cadastros/pedidos/pedidos/incluir/incluir/incluir.component';
+import { EditarComponentPedido } from './cadastros/pedidos/pedidos/editar/editar/editar.component';
+import { ExcluirComponentPedido } from './cadastros/pedidos/pedidos/excluir/excluir/excluir.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
@@ -52,7 +54,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     EditarComponentDesp,
     IncluirComponentDesp,
     ExcluirComponentDesp,
-    IncluirComponentPedidos
+    IncluirComponentPedidos,
+    EditarComponentPedido,
+    ExcluirComponentPedido
   ],
   imports: [
     MatDatepickerModule,

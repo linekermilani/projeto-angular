@@ -42,7 +42,8 @@
       "numero": 5300,
       "bairro": "Ecoville",
       "cidade": "Curitiba",
-      "valor": 109.9
+      "valor": 109.9,
+      "produtos": "produto teste 1"
     },
     {
       "id": 2,
@@ -52,41 +53,8 @@
       "numero": "80",
       "bairro": "Centro",
       "cidade": "Curitiba",
-      "produtos": "produto teste 1\nproduto teste 2",
+      "produtos": "produto teste 1\nproduto teste 4",
       "valor": 89.9
-    },
-    {
-      "id": 3,
-      "data": "",
-      "nome": "",
-      "rua": "",
-      "numero": 0,
-      "bairro": "",
-      "cidade": "",
-      "produtos": "",
-      "valor": 0
-    },
-    {
-      "id": 4,
-      "data": "",
-      "nome": "",
-      "rua": "",
-      "numero": 0,
-      "bairro": "",
-      "cidade": "",
-      "produtos": "",
-      "valor": 0
-    },
-    {
-      "id": 5,
-      "data": "",
-      "nome": "",
-      "rua": "",
-      "numero": 0,
-      "bairro": "",
-      "cidade": "",
-      "produtos": "",
-      "valor": 0
     }
   ]
 }

@@ -50,6 +50,10 @@ export class CadastrosService {
     return this.http.get<Despesas>(this.URL2 + "/" + id);
   }
 
+  buscarPedidoPorId(id: number) : Observable<Pedido>{
+    return this.http.get<Pedido>(this.URL3 + "/" + id);
+  }
+
   atualizar(idAtualizar: number, produtoAlterado: Produto) : Observable<any> {
     return this.http.put<any>(this.URL + "/" + idAtualizar, produtoAlterado);
   }
@@ -58,12 +62,20 @@ export class CadastrosService {
     return this.http.put<any>(this.URL2 + "/" + idAtualizar, despesaAlterada);
   }
 
+  atualizarPedido(idAtualizar: number, pedidoAlterado: Pedido) : Observable<any> {
+    return this.http.put<any>(this.URL3 + "/" + idAtualizar, pedidoAlterado);
+  }
+
   excluir(id: number) : Observable<Produto> {
     return this.http.delete<any>(this.URL + "/" + id);
   }
 
   excluirDespesa(id: number) : Observable<Despesas> {
     return this.http.delete<any>(this.URL2 + "/" + id);
+  }
+
+  excluirPedido(id: number) : Observable<Pedido> {
+    return this.http.delete<any>(this.URL3 + "/" + id);
   }
 
   showMessage(msg: string) : void {

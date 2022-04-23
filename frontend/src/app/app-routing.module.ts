@@ -13,6 +13,8 @@ import { ExcluirComponent } from './cadastros/produtos/produtos/excluir/excluir/
 import { IncluirComponentDesp } from './cadastros/despesas/despesas/incluir/incluir/incluir.component';
 import { ExcluirComponentDesp } from './cadastros/despesas/despesas/excluir/excluir/excluir.component';
 import { IncluirComponentPedidos } from './cadastros/pedidos/pedidos/incluir/incluir/incluir.component';
+import { EditarComponentPedido } from './cadastros/pedidos/pedidos/editar/editar/editar.component';
+import { ExcluirComponentPedido } from './cadastros/pedidos/pedidos/excluir/excluir/excluir.component';
 
 const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -26,7 +28,9 @@ const routes: Routes = [
     {path: "despesas/editar/:id", component: EditarComponentDesp},
     {path: "despesas/incluir", component: IncluirComponentDesp},
     {path: "despesas/excluir/:id", component: ExcluirComponentDesp},
-    {path: "pedidos/incluir", component: IncluirComponentPedidos}
+    {path: "pedidos/incluir", component: IncluirComponentPedidos},
+    {path: "pedidos/editar/:id", component: EditarComponentPedido},
+    {path: "pedidos/excluir/:id", component: ExcluirComponentPedido}
 ];
 
 @NgModule({
