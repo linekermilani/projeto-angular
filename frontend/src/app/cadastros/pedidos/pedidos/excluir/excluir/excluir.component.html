@@ -8,8 +8,13 @@
           <input matInput type="text" placeholder="Data" name="data" [(ngModel)]="pedido.data">
         </mat-form-field>
         <mat-form-field>
-          <input matInput type="text" placeholder="Nome" name="nome" [(ngModel)]="pedido.nome">
-        </mat-form-field>
+          <mat-label>Cliente</mat-label>
+          <mat-select matNativeControl disabled id="cliente" required name="cliente" [(value)]="pedido.cliente.id">
+            <mat-option *ngFor="let cliente of clientes" [value]="cliente.id">
+              {{cliente.nome}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>  
         <mat-form-field>
           <input matInput type="text" placeholder="Rua" name="rua" [(ngModel)]="pedido.rua">
         </mat-form-field>
@@ -23,7 +28,12 @@
           <input matInput type="text" placeholder="Cidade" name="cidade" [(ngModel)]="pedido.cidade">
         </mat-form-field>
         <mat-form-field>
-          <input matInput type="text" placeholder="Produtos" name="produtos" [(ngModel)]="pedido.produtos">
+          <mat-label>Produto</mat-label>
+          <mat-select matNativeControl disabled id="produto" required name="produto" [(value)]="pedido.produto.id">
+            <mat-option *ngFor="let produto of produtos" [value]="produto.id">
+              {{produto.nome}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
         <mat-form-field>
           <input matInput type="text" placeholder="Valor" name="valor" [(ngModel)]="pedido.valor">

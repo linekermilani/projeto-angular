@@ -1,12 +1,14 @@
+import { Produto } from './produto.model';
+import { Cliente } from './cliente.model';
 export class Pedido {
     
     id: number = 0;
-    data: String = '';
-    nome: String = '';
+    data: Date = new Date();
+    cliente: Cliente = new Cliente();
     rua: String = '';
     numero: number = 0;
     bairro: String = '';
     cidade: String = '';
-    produtos: String = '';
+    produto: Produto = new Produto();
     valor: number = 0;
 }

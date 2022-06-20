@@ -1,0 +1,23 @@
+<div class="tituloListas">
+    <h1>Excluir cliente</h1>
+  </div>
+  <form>
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Nome" name="nome" [(ngModel)]="cliente.nome">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="CPF" name="cpf" [(ngModel)]="cliente.cpf">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Telefone" name="telefone" [(ngModel)]="cliente.telefone">
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button class="btnMyFood" (click)="excluirCliente(cliente)" color="warn">Confirmar</button>
+        <button mat-raised-button class="btnMyFood" routerLink="/clientes">Cancelar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

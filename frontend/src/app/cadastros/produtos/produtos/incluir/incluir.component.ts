@@ -1,7 +1,8 @@
+import { ProdutoService } from './../../../../services/produto.service';
 import { Component, OnInit } from '@angular/core';
-import { Produto } from 'src/models/produto.model';
-import { CadastrosService } from 'src/app/services/cadastros.service';
 import { Router } from '@angular/router';
+import { CadastrosService } from 'src/app/services/cadastros.service';
+import { Produto } from 'src/models/produto.model';
 
 @Component({
   selector: 'app-incluir',
@@ -12,16 +13,20 @@ export class IncluirComponent implements OnInit {
 
   produto : Produto = new Produto();
 
-  constructor(private cadastro : CadastrosService,
-    private router : Router) { }
+  constructor(private produtoService : ProdutoService,
+    private router : Router) {
+      let produto = new Produto();
+      this.produto = produto;
+     }
 
   ngOnInit(): void {
+    
   }
 
   salvarProduto(){
-    this.cadastro.incluirProduto(this.produto).subscribe(() => {
+    this.produtoService.salvar(this.produto).subscribe(() => {
       this.router.navigate(['/produtos']);
-      this.cadastro.showMessage("Produto criado!");
+      this.produtoService.showMessage("Produto criado!");
     });
   }
 }

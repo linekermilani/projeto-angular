@@ -1,3 +1,8 @@
+import { Produto } from 'src/models/produto.model';
+import { Cliente } from 'src/models/cliente.model';
+import { ProdutoService } from './../../../services/produto.service';
+import { ClienteService } from './../../../services/cliente.service';
+import { PedidoService } from './../../../services/pedido.service';
 import { CadastrosService } from 'src/app/services/cadastros.service';
 import { Router } from '@angular/router';
 import { Pedido } from './../../../../models/pedido.model';
@@ -10,16 +15,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosComponent implements OnInit {
 
-  pedidos : Pedido[];
-  colunas: string[] = ['id', 'data', 'nome', 'rua', 'numero','bairro', 'cidade', 'produtos', 'valor', 'acoes'];
+  pedidos : Pedido[] = [];
+  clientes : Cliente[] = [];
+  produtos : Produto[] = [];
+  colunas: string[] = ['id', 'data', 'cliente', 'rua', 'numero','bairro', 'cidade', 'produtos', 'valor', 'acoes'];
 
-  constructor(private router : Router ,private service : CadastrosService) {
-    this.pedidos = [];
-   }
+  constructor(private pedidoService : PedidoService, 
+    private clienteService : ClienteService, 
+    private produtoService : ProdutoService) { }
 
   ngOnInit(): void {
-    this.service.listarPedidos().subscribe(pedidos => {
-      console.log(pedidos);
+    this.clienteService.listar().subscribe(clientes => {
+      this.clientes = clientes;
+    });
+    this.produtoService.listar().subscribe(produtos => {
+      this.produtos = produtos;
+    })
+    this.pedidoService.listar().subscribe(pedidos => {
       this.pedidos = pedidos;
     });
   }

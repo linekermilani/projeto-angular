@@ -1,3 +1,6 @@
+import { EditarComponentCliente } from './cadastros/clientes/editar/editar.component';
+import { ExcluirComponentCliente } from './cadastros/clientes/excluir/excluir.component';
+import { IncluirComponentCliente } from './cadastros/clientes/listar-clientes/incluir/incluir.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -36,6 +39,10 @@ import { IncluirComponentPedidos } from './cadastros/pedidos/pedidos/incluir/inc
 import { EditarComponentPedido } from './cadastros/pedidos/pedidos/editar/editar/editar.component';
 import { ExcluirComponentPedido } from './cadastros/pedidos/pedidos/excluir/excluir/excluir.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ListarClientesComponent } from './cadastros/clientes/listar-clientes/listar-clientes.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -56,7 +63,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     ExcluirComponentDesp,
     IncluirComponentPedidos,
     EditarComponentPedido,
-    ExcluirComponentPedido
+    ExcluirComponentPedido,
+    ListarClientesComponent,
+    IncluirComponentCliente,
+    ExcluirComponentCliente,
+    EditarComponentCliente,
   ],
   imports: [
     MatDatepickerModule,
@@ -75,7 +86,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

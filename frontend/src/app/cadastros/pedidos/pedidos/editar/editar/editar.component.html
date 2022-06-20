@@ -11,13 +11,17 @@
       </ng-template>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>Nome</ng-template>
-      <ng-template matStepContent>
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Nome</mat-label>
-            <input matInput [(ngModel)]="pedido.nome" name="nome">
-          </mat-form-field>
-          <br>
+      <ng-template matStepLabel>Cliente</ng-template>
+    <ng-template matStepContent>
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Cliente</mat-label>
+          <mat-select matNativeControl id="cliente" required name="cliente" [(ngModel)]="pedido.cliente.id">
+            <mat-option *ngFor="let cliente of clientes" [value]="cliente.id">
+              {{cliente.nome}}
+            </mat-option>
+          </mat-select>  
+        </mat-form-field>
+        <br>
           <button mat-button matStepperPrevious>Voltar</button>
         <button mat-button matStepperNext>Próximo</button>
       </ng-template>
@@ -49,15 +53,19 @@
           <button mat-button matStepperNext>Próximo</button>
         </ng-template>
       </mat-step>
-    <mat-step>
-        <ng-template matStepLabel>Produtos</ng-template>
+      <mat-step>
+        <ng-template matStepLabel>Produto</ng-template>
         <ng-template matStepContent>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Produtos do pedido</mat-label>
-            <textarea matInput [(ngModel)]="pedido.produtos" name="produtos"></textarea>
-          </mat-form-field>
-          <br>
-          <button mat-button matStepperPrevious>Voltar</button>
+              <mat-label>Produto</mat-label>
+              <mat-select matNativeControl id="produto" required name="produto" [(ngModel)]="pedido.produto.id">
+                <mat-option *ngFor="let produto of produtos" [value]="produto.id">
+                  {{produto.nome}}
+                </mat-option>
+              </mat-select>  
+            </mat-form-field>
+            <br>
+            <button mat-button matStepperPrevious>Voltar</button>
           <button mat-button matStepperNext>Próximo</button>
         </ng-template>
       </mat-step>

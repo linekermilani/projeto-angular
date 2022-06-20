@@ -1,0 +1,22 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="" [(ngModel)]="cliente.nome" name="nome">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>CPF</mat-label>
+    <textarea matInput placeholder="" [(ngModel)]="cliente.cpf" name="cpf"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Telefone</mat-label>
+    <input matInput placeholder="" [(ngModel)]="cliente.telefone" name="telefone">
+  </mat-form-field>
+
+  <mat-card-actions>
+    <button mat-raised-button class="btnMyFood" (click)="salvarCliente()" color="primary">Salvar</button>
+    <button mat-raised-button class="btnMyFood" routerLink="/clientes">Cancelar</button>
+  </mat-card-actions>
+</form>
+

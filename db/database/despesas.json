@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "nome": "Água",
+      "descricao": "Conta de água, janeiro 2022",
+      "preco": "120.86"
+    },
+    {
+      "id": 2,
+      "nome": "Luz",
+      "descricao": "Conta de luz, janeiro 2022",
+      "preco": "189.42"
+    }
+    ,
+    {
+      "id": 3,
+      "nome": "Mercado",
+      "descricao": "Compra no dia 15/01/2022",
+      "preco": "986.90"
+    }
+    ,
+    {
+      "id": 4,
+      "nome": "Funcionários",
+      "descricao": "Folha de pagamento Janeiro 2022",
+      "preco": "4800.00"
+    }
+    ,
+    {
+      "id": 5,
+      "nome": "IPTU",
+      "descricao": "Primeira parcela 2022",
+      "preco": "180.90"
+    }
+]

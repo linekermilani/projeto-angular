@@ -1,3 +1,8 @@
+import { ProdutoService } from './../../../../../services/produto.service';
+import { Produto } from 'src/models/produto.model';
+import { PedidoService } from './../../../../../services/pedido.service';
+import { ClienteService } from './../../../../../services/cliente.service';
+import { Cliente } from 'src/models/cliente.model';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CadastrosService } from './../../../../../services/cadastros.service';
 import { Pedido } from './../../../../../../models/pedido.model';
@@ -11,22 +16,32 @@ import { Component, OnInit } from '@angular/core';
 export class EditarComponentPedido implements OnInit {
 
   pedido : Pedido = new Pedido();
+  clientes : Cliente[] = [];
+  produtos : Produto[] = [];
 
-  constructor(private cadastro : CadastrosService,
+  constructor(private pedidoService : PedidoService,
+    private clienteService : ClienteService,
+    private produtoService : ProdutoService,
     private router : Router,
     private activatedRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.clienteService.listar().subscribe(clientes => {
+      this.clientes = clientes;
+    });
+    this.produtoService.listar().subscribe(produtos => {
+      this.produtos = produtos;
+    })
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.cadastro.buscarPedidoPorId(Number(id)).subscribe(pedido => {
+    this.pedidoService.buscarPorId(Number(id)).subscribe(pedido => {
       this.pedido = pedido;
   });
   }
 
   atualizarPedido(){
-    this.cadastro.atualizarPedido(this.pedido.id, this.pedido).subscribe(() => {
+    this.pedidoService.atualizar(this.pedido).subscribe(() => {
       this.router.navigate(['/pedidos']);
-      this.cadastro.showMessage("Pedido editado!");
+      this.pedidoService.showMessage("Pedido editado!");
     });
   }
 }

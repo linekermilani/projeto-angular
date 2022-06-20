@@ -1,3 +1,4 @@
+import { ProdutoService } from './../../../services/produto.service';
 import { Produto } from './../../../../models/produto.model';
 import { CadastrosService } from 'src/app/services/cadastros.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,16 +11,13 @@ import { Router } from '@angular/router'
 })
 export class ProdutosComponent implements OnInit {
 
-  produtos : Produto[];
+  produtos : Produto[] = [];
   colunas: string[] = ['id', 'nome', 'descricao', 'preco', 'acoes'];
 
-  constructor(private router : Router ,private service : CadastrosService) {
-    this.produtos = [];
-   }
+  constructor(private produtoService : ProdutoService) { }
 
   ngOnInit(): void {
-    this.service.listar().subscribe(produtos => {
-      console.log(produtos);
+    this.produtoService.listar().subscribe(produtos => {
       this.produtos = produtos;
     });
   }

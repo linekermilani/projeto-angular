@@ -1,6 +1,7 @@
-import { CadastrosService } from 'src/app/services/cadastros.service';
+import { ProdutoService } from './../../../../../services/produto.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CadastrosService } from 'src/app/services/cadastros.service';
 import { Produto } from 'src/models/produto.model';
 
 @Component({
@@ -12,21 +13,21 @@ export class ExcluirComponent implements OnInit {
 
   produto : Produto = new Produto();
 
-  constructor(private cadastro : CadastrosService,
+  constructor(private produtoService : ProdutoService,
     private router : Router,
     private activatedRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.cadastro.buscarPorId(Number(id)).subscribe(produto => {
+    this.produtoService.buscarPorId(Number(id)).subscribe(produto => {
       this.produto = produto;
-  });
+    });
   }
 
-  excluirProduto(){
-    this.cadastro.excluir(this.produto.id).subscribe(() => {
+  excluirProduto(produto : Produto){
+    this.produtoService.excluir(produto.id).subscribe(() => {
       this.router.navigate(['/produtos']);
-      this.cadastro.showMessage("Produto excluido!");
+      this.produtoService.showMessage("Produto Excluído!");
     });
   }
 }

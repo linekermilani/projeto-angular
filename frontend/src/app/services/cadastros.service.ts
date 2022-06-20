@@ -1,3 +1,4 @@
+import { Cliente } from './../../models/cliente.model';
 import { Pedido } from './../../models/pedido.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Produto } from './../../models/produto.model';
@@ -12,9 +13,10 @@ import { Despesas } from 'src/models/despesa.model';
 })
 export class CadastrosService {
 
-  URL = "http://localhost:3001/produtos";
-  URL2 = "http://localhost:3001/despesas";
-  URL3 = "http://localhost:3001/pedidos";
+  URL = "http://localhost:3000/produtos";
+  URL2 = "http://localhost:3000/despesas";
+  URL3 = "http://localhost:3000/pedidos";
+  URL4 = "http://localhost:3000/clientes";
 
   constructor(private snackBar : MatSnackBar, private http: HttpClient) { }
 
@@ -30,6 +32,10 @@ export class CadastrosService {
     return this.http.get<any[]>(this.URL3);
   }
 
+  listarCliente(): Observable<any[]>{
+    return this.http.get<any[]>(this.URL4);
+  }
+
   incluirProduto(produto : Produto) : Observable<any>{
     return this.http.post<any>(this.URL, produto);
   }
@@ -40,6 +46,10 @@ export class CadastrosService {
 
   incluirPedido(pedido : Pedido) : Observable<any>{
     return this.http.post<any>(this.URL3, pedido);
+  }
+
+  incluirCliente(cliente : Cliente) : Observable<any>{
+    return this.http.post<any>(this.URL4, cliente);
   }
 
   buscarPorId(id: number) : Observable<Produto>{
@@ -54,6 +64,10 @@ export class CadastrosService {
     return this.http.get<Pedido>(this.URL3 + "/" + id);
   }
 
+  buscarClientePorId(id: number) : Observable<Cliente>{
+    return this.http.get<Cliente>(this.URL4 + "/" + id);
+  }
+
   atualizar(idAtualizar: number, produtoAlterado: Produto) : Observable<any> {
     return this.http.put<any>(this.URL + "/" + idAtualizar, produtoAlterado);
   }
@@ -66,6 +80,10 @@ export class CadastrosService {
     return this.http.put<any>(this.URL3 + "/" + idAtualizar, pedidoAlterado);
   }
 
+  atualizarCliente(idAtualizar: number, clienteAlterado: Cliente) : Observable<any> {
+    return this.http.put<any>(this.URL4 + "/" + idAtualizar, clienteAlterado);
+  }
+
   excluir(id: number) : Observable<Produto> {
     return this.http.delete<any>(this.URL + "/" + id);
   }
@@ -76,6 +94,10 @@ export class CadastrosService {
 
   excluirPedido(id: number) : Observable<Pedido> {
     return this.http.delete<any>(this.URL3 + "/" + id);
+  }
+
+  excluirCliente(id: number) : Observable<Cliente> {
+    return this.http.delete<any>(this.URL4 + "/" + id);
   }
 
   showMessage(msg: string) : void {
