@@ -18,7 +18,7 @@ export class PedidosComponent implements OnInit {
   pedidos : Pedido[] = [];
   clientes : Cliente[] = [];
   produtos : Produto[] = [];
-  colunas: string[] = ['id', 'data', 'cliente', 'rua', 'numero','bairro', 'cidade', 'produtos', 'valor', 'acoes'];
+  colunas: string[] = ['id', 'data', 'cliente', 'produtos', 'valor', 'acoes'];
 
   constructor(private pedidoService : PedidoService, 
     private clienteService : ClienteService, 

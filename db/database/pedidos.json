@@ -3,10 +3,6 @@
       "id": 1,
       "data": "2022-04-10",
       "cliente": 2,
-      "rua": "R. Prof. Pedro Viriato Parigot de Souza",
-      "numero": 5300,
-      "bairro": "Ecoville",
-      "cidade": "Curitiba",
       "valor": 109.9,
       "produtos": 2
     },
@@ -14,10 +10,6 @@
       "id": 2,
       "data": "2022-04-15",
       "cliente": 1,
-      "rua": "Rua Ney Rebello Tourinho",
-      "numero": 80,
-      "bairro": "CIC",
-      "cidade": "Curitiba",
       "produtos": 5,
       "valor": 89.9
     },
@@ -25,10 +17,6 @@
       "id": 2,
       "data": "2022-04-20",
       "cliente": 3,
-      "rua": "Rua Olívia de Oliveira",
-      "numero": 48,
-      "bairro": "Cajuru",
-      "cidade": "Curitiba",
       "produtos": 1,
       "valor": 20.00
     }
@@ -37,10 +25,6 @@
       "id": 3,
       "data": "2022-04-20",
       "cliente": 6,
-      "rua": "Rua Rosa Machado",
-      "numero": 189,
-      "bairro": "São Lourenço",
-      "cidade": "Curitiba",
       "produtos": 1,
       "valor": 18.90
     }
@@ -49,10 +33,6 @@
       "id": 4,
       "data": "2022-04-21",
       "cliente": 5,
-      "rua": "Rua Elem Kotsanar",
-      "numero": 298,
-      "bairro": "Sítio Cercado",
-      "cidade": "Curitiba",
       "produtos": 1,
       "valor": 39.90
     }
@@ -61,10 +41,6 @@
       "id": 5,
       "data": "2022-04-22",
       "cliente": 4,
-      "rua": "Rua Edson Antônio Ramos",
-      "numero": 482,
-      "bairro": "Xaxim",
-      "cidade": "Curitiba",
       "produtos": 1,
       "valor": 49.90
     },
@@ -72,10 +48,6 @@
       "id": 6,
       "data": "2022-04-22",
       "cliente": 8,
-      "rua": "Rua Ilor Bressiani",
-      "numero": 357,
-      "bairro": "Jardim Social",
-      "cidade": "Curitiba",
       "produtos": 1,
       "valor": 29.90
     }

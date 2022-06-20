@@ -4,4 +4,8 @@ export class Cliente {
     nome: String = '';
     cpf: String = '';
     telefone: String = '';
+    rua: String = '';
+    numero: number = 0;
+    bairro: String = '';
+    cidade: String = '';
 }

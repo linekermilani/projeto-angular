@@ -16,18 +16,6 @@
           </mat-select>
         </mat-form-field>  
         <mat-form-field>
-          <input matInput type="text" placeholder="Rua" name="rua" [(ngModel)]="pedido.rua">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Número" name="numero" [(ngModel)]="pedido.numero">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Bairro" name="bairro" [(ngModel)]="pedido.bairro">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Cidade" name="cidade" [(ngModel)]="pedido.cidade">
-        </mat-form-field>
-        <mat-form-field>
           <mat-label>Produto</mat-label>
           <mat-select matNativeControl disabled id="produto" required name="produto" [(value)]="pedido.produto.id">
             <mat-option *ngFor="let produto of produtos" [value]="produto.id">

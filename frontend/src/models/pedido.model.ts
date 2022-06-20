@@ -5,10 +5,6 @@ export class Pedido {
     id: number = 0;
     data: Date = new Date();
     cliente: Cliente = new Cliente();
-    rua: String = '';
-    numero: number = 0;
-    bairro: String = '';
-    cidade: String = '';
     produto: Produto = new Produto();
     valor: number = 0;
 }

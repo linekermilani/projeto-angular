@@ -6,10 +6,6 @@ const pedidoSchema = new mongoose.Schema({
     id: Number,
     data: {type: Date, default: Date.now},
     cliente: clienteSchema,
-    rua: String,
-    numero: Number,
-    bairro: String,
-    cidade: String,
     produtos: [produtoSchema],
     valor: Number,
 });

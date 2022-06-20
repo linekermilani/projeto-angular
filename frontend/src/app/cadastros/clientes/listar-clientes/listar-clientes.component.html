@@ -22,6 +22,26 @@
     <td mat-cell *matCellDef="let clientes"> {{clientes.telefone}}</td>
   </ng-container>
 
+  <ng-container matColumnDef="rua">
+    <th mat-header-cell *matHeaderCellDef> Rua </th>
+    <td mat-cell *matCellDef="let clientes"> {{clientes.rua}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="numero">
+    <th mat-header-cell *matHeaderCellDef> Número </th>
+    <td mat-cell *matCellDef="let clientes"> {{clientes.numero}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="bairro">
+    <th mat-header-cell *matHeaderCellDef> Bairro </th>
+    <td mat-cell *matCellDef="let clientes"> {{clientes.bairro}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="cidade">
+    <th mat-header-cell *matHeaderCellDef> Cidade </th>
+    <td mat-cell *matCellDef="let clientes"> {{clientes.cidade}}</td>
+  </ng-container>
+
   <ng-container matColumnDef="acoes">
     <th mat-header-cell *matHeaderCellDef> Ações </th>
     <td class="ultima-coluna" mat-cell *matCellDef="let clientes">

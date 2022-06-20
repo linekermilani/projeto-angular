@@ -26,33 +26,6 @@
         <button mat-button matStepperNext>Próximo</button>
       </ng-template>
     </mat-step>
-    <mat-step>
-        <ng-template matStepLabel>Endereço</ng-template>
-        <ng-template matStepContent>
-          <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Rua</mat-label>
-              <input matInput [(ngModel)]="pedido.rua" name="rua">
-            </mat-form-field>
-            <br>
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Número</mat-label>
-                <input matInput [(ngModel)]="pedido.numero" name="numero">
-              </mat-form-field>
-              <br>
-              <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Bairro</mat-label>
-                <input matInput [(ngModel)]="pedido.bairro" name="bairro">
-              </mat-form-field>
-              <br>
-              <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Cidade</mat-label>
-                <input matInput [(ngModel)]="pedido.cidade" name="cidade">
-              </mat-form-field>
-              <br>
-            <button mat-button matStepperPrevious>Voltar</button>
-          <button mat-button matStepperNext>Próximo</button>
-        </ng-template>
-      </mat-step>
       <mat-step>
         <ng-template matStepLabel>Produto</ng-template>
         <ng-template matStepContent>

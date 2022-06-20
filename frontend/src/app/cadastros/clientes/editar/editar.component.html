@@ -13,6 +13,26 @@
       <mat-label>Telefone</mat-label>
       <input matInput placeholder="" [(ngModel)]="cliente.telefone" name="telefone">
     </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Rua</mat-label>
+      <input matInput placeholder="" [(ngModel)]="cliente.rua" name="rua">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Número</mat-label>
+      <input matInput placeholder="" [(ngModel)]="cliente.numero" name="numero">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Bairro</mat-label>
+      <input matInput placeholder="" [(ngModel)]="cliente.bairro" name="bairro">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Cidade</mat-label>
+      <input matInput placeholder="" [(ngModel)]="cliente.cidade" name="cidade">
+    </mat-form-field>
   
     <mat-card-actions>
       <button mat-raised-button class="btnMyFood" (click)="atualizarCliente()" color="primary">Salvar</button>

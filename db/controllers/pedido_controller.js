@@ -16,7 +16,7 @@ class pedidoController {
         pedido.produto = produto._id;
         
         const resultado = await pedidoModel.create(pedido);
-        res.status(201).json(resultado);
+        res.status(201).send();
     }
 
     async listar(req, res){
@@ -25,10 +25,11 @@ class pedidoController {
     }
 
     async buscarPorId(req, res){
-        const id = req.params.id;
-        const resultado = await pedidoModel.findOne({'id': id}).populate('cliente').populate('produto');
+        const id = String(req.params.id);
+        const resultado = await clienteModel.findOne({'id': id});
         res.status(200).json(resultado);
     }
+    
 
     async atualizar(req, res){
         const id = req.params.id;
@@ -46,7 +47,9 @@ class pedidoController {
 
     async excluir(req, res){
         const id = req.params.id;
-        const _id = String((await pedidoModel.findOne({'id': id})))._id;  
+        const _id = String((await pedidoModel.findOne({'id': id}))._id);
+
+
         
         await pedidoModel.findByIdAndRemove(String(_id));
         res.status(200).send();
